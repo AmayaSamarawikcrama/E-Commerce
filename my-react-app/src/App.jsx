@@ -11,6 +11,7 @@ function App() {
       <Nav/>
       <Routes>
         <Route path="/" element={<CusLandingPage />} />
+        
       </Routes>
       <Footer />
     </Router>
