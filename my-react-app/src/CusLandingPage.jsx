@@ -44,7 +44,7 @@ const CusLandingPage = () => {
       <section className="luxury-hero">
         <div className="hero-overlay"></div>
         
-        <div className="hero-content text-center">
+        <div className="hero-content text-left align-items-start">
           <h1 className="hero-title">
             <span className="title-line">Curated Excellence</span>
             <span className="title-line">For The Discerning</span>
