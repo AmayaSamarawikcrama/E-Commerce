@@ -6,12 +6,12 @@ function Footer() {
         <footer
             className="footer py-4 text-center"
             style={{
-                color: 'red',
+                color: '#f44444',
                 position: 'relative',
                 left: 0,
                 bottom: 0,
                 width: '110%',
-                background: '#f0dcdc',
+                background: "linear-gradient(135deg, #020000, #362929)",  
                 zIndex: 100,
                 fontFamily: "'Roboto', Arial, sans-serif"
             }}
