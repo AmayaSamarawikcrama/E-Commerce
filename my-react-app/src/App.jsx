@@ -3,17 +3,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './Nav';
 import CusLandingPage from './CusLandingPage';
 import Footer from './Footer';
+import Login from './Login';
 
 
 function App() {
   return (
     <Router>
-      <Nav/>
+     
       <Routes>
-        <Route path="/" element={<CusLandingPage />} />
+        <Route path="/" element={<CusLandingPage/>} />
+        <Route path="/login" element={<Login />} />
         
       </Routes>
-      <Footer />
+      
     </Router>
   );
 }

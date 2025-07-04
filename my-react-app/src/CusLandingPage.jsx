@@ -3,6 +3,9 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './CusLandingPage.css';
+import './Nav';
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 const categories = [
   { 
@@ -40,6 +43,7 @@ const categories = [
 const CusLandingPage = () => {
   return (
     <div className="luxury-landing-page">
+      <Nav/>
       {/* Hero Section */}
       <section className="luxury-hero">
         <div className="hero-overlay"></div>
@@ -55,11 +59,19 @@ const CusLandingPage = () => {
           </p>
           
           <div className="hero-cta">
-            <Button variant="outline-light" className="cta-btn me-3">
-              Become a Member
+            <Button
+              variant="outline-light"
+              className="cta-btn me-3"
+              onClick={() => window.location.href = "/Login"}
+            >
+              User Can Sign In
             </Button>
-            <Button variant="light" className="cta-btn">
-              Explore Collections
+            <Button
+              variant="light"
+              className="cta-btn"
+              onClick={() => window.location.href = "/login"}
+            >
+              User Can Login
             </Button>
           </div>
         </div>
@@ -141,6 +153,7 @@ const CusLandingPage = () => {
           </Row>
         </Container>
       </section>
+      <Footer/>
     </div>
   );
 };
