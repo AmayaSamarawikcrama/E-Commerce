@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.png';
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -81,7 +82,16 @@ const Nav = () => {
                     fontSize: '12px',
                     textShadow: '0 0 10px rgba(0,0,0,0.8)'
                   }}>
-                    D
+                   <img 
+  src={logo} 
+  alt="Logo" 
+  style={{
+    height: '5rem',
+    width: '5rem',
+    objectFit: 'contain',
+    margin: '0 0.1em'
+  }} 
+/>
                   </div>
                 </div>
               </div>
@@ -89,7 +99,7 @@ const Nav = () => {
               <div>
                 <h1 className="mb-0 fw-bold" style={{
                   fontSize: '2.8rem',
-                  background: 'linear-gradient(45deg, #FFD700 0%, #FF6B6B 30%, #4ECDC4 60%, #45B7D1 100%)',
+                  background: 'linear-gradient(45deg,rgb(237, 230, 229) 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   fontFamily: 'serif',
@@ -97,7 +107,7 @@ const Nav = () => {
                   textShadow: '0 0 40px rgba(255, 215, 0, 0.3)',
                   position: 'relative'
                 }}>
-                  DAWN
+                  Be Big
                 </h1>
                 <div className="text-warning" style={{
                   fontSize: '0.7rem',
