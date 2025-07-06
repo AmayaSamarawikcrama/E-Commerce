@@ -60,7 +60,7 @@ const CusLandingPage = () => {
             <Button
               variant="danger"
               size="lg"
-              onClick={() => window.location.href = "/Login"}
+              onClick={() => window.location.href = "/SignIn"}
             >
               Sign In
             </Button>
