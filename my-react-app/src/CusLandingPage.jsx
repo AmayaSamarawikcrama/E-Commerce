@@ -44,37 +44,35 @@ const CusLandingPage = () => {
   return (
     <div className="luxury-landing-page">
       <Nav/>
-      {/* Hero Section */}
-      <section className="luxury-hero">
-        <div className="hero-overlay"></div>
-        
-        <div className="hero-content ">
-          <h1 className="hero-title">
-            <span className="title-line">Curated Excellence</span>
-            <span className="title-line">For The Discerning</span>
+      
+      <section className="luxury-hero position-relative text-white text-center d-flex align-items-center justify-content-center">
+        <div className="hero-background"></div>
+        <div className="hero-overlay-gradient"></div>
+        <Container className="hero-content py-5">
+          
+          <h1 className="display-3 fw-bold mb-3">
+            Curated Excellence<br className="d-none d-md-inline" /> For The Discerning
           </h1>
-          
-          <p className="hero-subtitle">
-            Discover the pinnacle of quality and service in one exclusive destination
+          <p className="lead mb-4">
+            Discover the pinnacle of quality and service in one exclusive destination.
           </p>
-          
-          <div className="hero-cta">
+          <div className="hero-cta d-flex justify-content-center flex-wrap gap-3">
             <Button
-              variant="outline-light"
-              className="cta-btn me-3"
+              variant="danger"
+              size="lg"
               onClick={() => window.location.href = "/Login"}
             >
-              User Can Sign In
+              Sign In
             </Button>
             <Button
-              variant="light"
-              className="cta-btn"
+              variant="danger"
+              size="lg"
               onClick={() => window.location.href = "/login"}
             >
-              User Can Login
+              Login
             </Button>
           </div>
-        </div>
+        </Container>
       </section>
 
       {/* Categories Section */}

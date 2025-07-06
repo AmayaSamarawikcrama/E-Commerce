@@ -10,8 +10,8 @@ function Footer() {
                 position: 'relative',
                 left: 0,
                 bottom: 0,
-                width: '110%',
-                background: "linear-gradient(135deg, #020000, #362929)",  
+                width: '100%',
+                background: "linear-gradient(135deg,rgb(247, 244, 244),rgb(253, 252, 252))",  
                 zIndex: 100,
                 fontFamily: "'Roboto', Arial, sans-serif"
             }}
