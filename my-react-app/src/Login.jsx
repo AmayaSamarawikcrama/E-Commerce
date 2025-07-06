@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Alert } from 'react-bootstrap';
 import './Login.css';
 import logo from './assets/logo.png'; // Ensure the logo path is correct
+import CusLandingPage from './CusLandingPage';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -32,8 +33,9 @@ const Login = () => {
                     <div className="text-center">
                       <img
                         src={logo}
-                        style={{ width: '185px' }}
+                        style={{ width: '185px', cursor: 'pointer' }}
                         alt="logo"
+                        onClick={() => window.location.href = "/"}
                       />
                       <h4 className="mt-1 mb-5 pb-1">We are The Be Big</h4>
                     </div>
@@ -97,7 +99,7 @@ const Login = () => {
                   </div>
                 </div>
 
-                {/* Right side */}
+             
                 <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
                   <div className="text-white px-2 py-3 p-md-3 mx-md-2">
                     <h4 className="mb-3">We are more than just a company</h4>
