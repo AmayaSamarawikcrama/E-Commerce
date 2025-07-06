@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Alert } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
-import logo from './assets/logo.png'; // Ensure the logo path is correct
-import CusLandingPage from './CusLandingPage';
+import logo from './assets/logo.png'; // Adjust path as needed
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState(null);
+  
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     if (email.trim() && password.trim()) {
       setMessage({ type: 'success', text: '✅ Login successful! Welcome.' });
+
+      // Redirect after 2 seconds
+      setTimeout(() => {
+        navigate('/CusHomePage');
+      }, 2000);
+
     } else {
       setMessage({ type: 'danger', text: '❌ Please enter both email and password.' });
     }
@@ -35,7 +43,7 @@ const Login = () => {
                         src={logo}
                         style={{ width: '185px', cursor: 'pointer' }}
                         alt="logo"
-                        onClick={() => window.location.href = "/"}
+                        onClick={() => navigate('/')}
                       />
                       <h4 className="mt-1 mb-5 pb-1">We are The Be Big</h4>
                     </div>
@@ -89,7 +97,7 @@ const Login = () => {
                         <button
                           type="button"
                           className="btn btn-outline-danger"
-                          onClick={() => window.location.href = "/SignIn"}
+                          onClick={() => navigate('/SignIn')}
                         >
                           Create new
                         </button>
@@ -99,7 +107,7 @@ const Login = () => {
                   </div>
                 </div>
 
-             
+                {/* Right side */}
                 <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
                   <div className="text-white px-2 py-3 p-md-3 mx-md-2">
                     <h4 className="mb-3">We are more than just a company</h4>

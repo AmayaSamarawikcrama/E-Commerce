@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Nav from './Nav';
-import CusLandingPage from './CusLandingPage';
+import Nav from './Customer/Nav';
+import CusLandingPage from './Customer/CusLandingPage';
 import Footer from './Footer';
 import Login from './Login';
 

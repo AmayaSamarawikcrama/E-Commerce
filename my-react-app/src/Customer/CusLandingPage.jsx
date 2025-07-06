@@ -5,7 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './CusLandingPage.css';
 import './Nav';
 import Nav from "./Nav";
-import Footer from "./Footer";
+import Footer from "../Footer";
 
 const categories = [
   { 
