@@ -3,9 +3,9 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './CusLandingPage.css';
-import './Nav';
-import Nav from "./Nav";
-import Footer from "../Footer";
+import '../Components/Nav';
+import Nav from "../Components/Nav";
+import Footer from "../Components/Footer";
 
 const categories = [
   { 

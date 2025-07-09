@@ -2,9 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Nav from './Customer/Nav';
+import Nav from './Components/Nav';
 import CusLandingPage from './Customer/CusLandingPage';
-import Footer from './Footer';
+import Footer from './Components/Footer';
 import Login from './Login';
 import CusHomePage from './Customer/CusHomePage';
 
