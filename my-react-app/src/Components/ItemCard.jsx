@@ -1,62 +1,28 @@
-// Card.jsx
+// ItemCard.jsx
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Card, Button, Container } from 'react-bootstrap';
 
 export default function ItemCard({ item, onAddToCart }) {
   return (
-    <div className="card" style={styles.card}>
-      <img src={item.image} alt={item.title} style={styles.image} />
-      <div style={styles.details}>
-        <h3 style={styles.title}>{item.title}</h3>
-        <p style={styles.price}>${item.price}</p>
-        <button 
-          style={styles.button} 
-          onClick={() => onAddToCart(item)}
-        >
-          Add to Cart
-        </button>
-      </div>
-    </div>
+    <Container className="my-3 d-flex justify-content-center">
+      <Card style={{ width: '18rem', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
+        <Card.Img 
+          variant="top" 
+          src={item.image} 
+          alt={item.title} 
+          style={{ height: '300px', objectFit: 'cover' }} 
+        />
+        <Card.Body className="text-center">
+          <Card.Title style={{ color: '#B00020' }}>{item.title}</Card.Title>
+          <Card.Text>${item.price}</Card.Text>
+          <Button 
+            variant="danger" 
+            onClick={() => onAddToCart(item)}
+          >
+            Add to Cart
+          </Button>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 }
-
-const styles = {
-  
-  card: {
-    border: '1px solid #ccc',
-    borderRadius: '12px',
-    padding: '16px',
-    backgroundColor: '#fff',
-    boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-    textAlign: 'center',
-    maxWidth: '250px',
-    transition: 'transform 0.2s',
-  },
-  image: {
-    width: '100%',
-    height: '200px',
-    objectFit: 'cover',
-    borderRadius: '8px',
-  },
-  details: {
-    marginTop: '12px',
-  },
-  title: {
-    fontSize: '1.1rem',
-    marginBottom: '8px',
-    color: '#B00020', // Red theme
-  },
-  price: {
-    fontSize: '1rem',
-    color: '#333',
-    marginBottom: '12px',
-  },
-  button: {
-    backgroundColor: '#B00020', // Red theme
-    color: '#fff',
-    border: 'none',
-    padding: '8px 16px',
-    borderRadius: '4px',
-    cursor: 'pointer',
-  },
-};

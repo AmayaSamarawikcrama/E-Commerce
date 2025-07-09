@@ -6,7 +6,7 @@ function Footer() {
         <footer
             className="footer py-4 text-center"
             style={{
-                color: '#f44444',
+                color: 'black',
                 position: 'relative',
                 left: 0,
                 bottom: 0,
@@ -34,7 +34,7 @@ function Footer() {
                                     letterSpacing: '2px'
                                 }}
                             >
-                                DAWN
+                                Be Big
                             </h6>
                             <p>
                                 Here you can use rows and columns to organize your footer content. Lorem ipsum

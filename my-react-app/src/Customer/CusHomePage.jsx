@@ -10,13 +10,13 @@ import './CusHomePage.css';
 
 // Dummy items remain the same
 const dummyItems = [
-  { id: 1, title: 'Red Sneakers', image: 'https://via.placeholder.com/300x200?text=Red+Sneakers', price: 49.99 },
-  { id: 2, title: 'Classic Watch', image: 'https://via.placeholder.com/300x200?text=Classic+Watch', price: 89.99 },
-  { id: 3, title: 'Leather Wallet', image: 'https://via.placeholder.com/300x200?text=Leather+Wallet', price: 29.99 },
-  { id: 4, title: 'Stylish Hat', image: 'https://via.placeholder.com/300x200?text=Stylish+Hat', price: 19.99 },
+  { id: 1, title: 'Sneakers', image: 'https://i.pinimg.com/736x/a4/51/91/a45191d2495bd794028d246e533ed545.jpg', price: 49.99 },
+  { id: 2, title: 'Classic Watch', image: 'https://i.pinimg.com/736x/53/34/16/5334162d414d0200f11048804968b8b3.jpg', price: 89.99 },
+  { id: 3, title: 'Leather Wallet', image: 'https://i.pinimg.com/736x/6e/35/9e/6e359e09da5d787b6eaeeb3a001f357a.jpg', price: 29.99 },
+  { id: 4, title: 'Stylish Hat', image: 'https://i.pinimg.com/736x/9e/7d/ef/9e7defaaed68f35b979e2bb3124da163.jpg', price: 19.99 },
 ];
 
-export default function CusHomePage() {
+ function CusHomePage() {
   const [cart, setCart] = useState([]);
   const productsRef = useRef(null);
 
@@ -57,3 +57,4 @@ export default function CusHomePage() {
     </div>
   );
 }
+export default CusHomePage;

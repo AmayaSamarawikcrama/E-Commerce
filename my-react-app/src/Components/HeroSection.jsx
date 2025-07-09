@@ -29,7 +29,7 @@ const styles = {
     marginBottom: '24px',
   },
   overlay: {
-    backgroundColor: 'rgba(85, 83, 84, 0.44)', // Red theme overlay
+    backgroundColor: 'rgba(63, 62, 62, 0.44)', // Red theme overlay
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
