@@ -10,6 +10,7 @@ import CusHomePage from './Customer/CusHomePage';
 import AboutUs from './Customer/AboutUs';
 import Offers from './Customer/Offers';
 import Men from './Customer/Men';
+import Women from './Customer/Women';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/offers" element={<Offers />} />
         <Route path="/Men" element={<Men />} />
+        <Route path="/Women" element={<Women />} />
 
       </Routes>
       
