@@ -7,6 +7,9 @@ import CusLandingPage from './Customer/CusLandingPage';
 import Footer from './Components/Footer';
 import Login from './Login';
 import CusHomePage from './Customer/CusHomePage';
+import AboutUs from './Customer/AboutUs';
+import Men from './Customer/Category/Men';
+import Offers from './Customer/Offers';
 
 
 
@@ -18,7 +21,10 @@ function App() {
         <Route path="/" element={<CusLandingPage/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/CusHomePage" element={<CusHomePage />} />
-        
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/men" element={<Men />} />
+        <Route path="/offers" element={<Offers />} />
+
       </Routes>
       
     </Router>

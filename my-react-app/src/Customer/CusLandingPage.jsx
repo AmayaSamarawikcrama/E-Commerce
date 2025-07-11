@@ -75,7 +75,7 @@ export default function CusLandingPage() {
 
       {/* Products Grid */}
       <Container className="my-5 py-5 bg-white">
-        <h2 className="text-center mb-4" style={{ color: '#B00020' }}>Our Products</h2>
+        <h2 className="text-center mb-4" style={{ color: '#FF5656' }}>Our Products</h2>
         <Row className="justify-content-center">
           {itemsData.map(item => (
             <Col key={item.id} xs={12} sm={6} md={4} lg={3} className="d-flex justify-content-center">

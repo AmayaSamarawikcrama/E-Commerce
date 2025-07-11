@@ -30,7 +30,7 @@ export default function HeroSection({ onShopNow }) {
     >
       <div style={styles.overlay}>
         <h1 className="display-4 fw-bold text-white mb-3">
-          Welcome to Our Red Themed Store
+          Welcome to Our Store
         </h1>
         <p className="lead text-white mb-4">
           Best Deals. Best Style. Just for You.

@@ -102,10 +102,7 @@ function Footer() {
                 </div>
             </section>
 
-            <div className="text-center p-4" style={{backgroundColor: "transparent"}}>
-                © 2021 Copyright:
-                <a className="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-            </div>
+           
         </footer>
     );
 }

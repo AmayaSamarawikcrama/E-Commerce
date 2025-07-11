@@ -39,7 +39,7 @@ const dummyItems = [
         <HeroSection onShopNow={scrollToProducts} />
 
         <div className="container py-5" ref={productsRef}>
-          <h1 className="text-center text-danger mb-4 border-bottom pb-2">
+          <h1 className="text-center  mb-4 border-bottom pb-2" style={{ color: '#FF5656' }}>
             Browse Our Products
           </h1>
 

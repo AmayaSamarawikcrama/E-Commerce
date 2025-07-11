@@ -29,13 +29,13 @@ export default function NavBar() {
 
             {/* ✅ Category Dropdown */}
             <NavDropdown title="Category" id="category-nav-dropdown" menuVariant="dark" fontcolor="white">
-              <NavDropdown.Item href="/category/men">Men</NavDropdown.Item>
+              <NavDropdown.Item href="/Customer/Category/Men">Men</NavDropdown.Item>
               <NavDropdown.Item href="/category/women">Women</NavDropdown.Item>
               <NavDropdown.Item href="/category/kids">Kids</NavDropdown.Item>
               <NavDropdown.Item href="/category/accessories">Accessories</NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="/about-us" className="text-white">About Us</Nav.Link>
+            <Nav.Link href="/about" className="text-white">About Us</Nav.Link>
           </Nav>
 
           {/* ✅ Search Bar */}
