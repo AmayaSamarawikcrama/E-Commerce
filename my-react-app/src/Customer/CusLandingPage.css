@@ -1,217 +1,46 @@
-/* Base Styles */
-.luxury-landing-page {
-  font-family: 'Playfair Display', serif;
-  color: #f44444;
-  background: linear-gradient(135deg, #f8f8f8, #fcfafa);  width: 112%;
-}
-.luxury-hero {
+.hero-section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   overflow: hidden;
 }
 
-.hero-background {
+.hero-video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/Users/amayaa/Documents/E-commerse Futech/E-Commerce/my-react-app/src/assets/flat-lay-notebook-with-shopping-bag-cyber-monday-tag.jpg') no-repeat center center;
-  
-  background-size: cover;
-  z-index: 1;
-}
-.hero-overlay-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(15, 15, 15, 0.451), rgba(0,0,0,0.6));
-  z-index: 2;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  color: #fff;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-}
-
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #f74444;
-  position: relative;
-  padding-bottom: 15px;
-}
-
-.section-title:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(to right, #8B0000, #DC143C);
-}
-
-.category-card {
-  background-color: #e79393ed;
-  border-radius: 10px;
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
-
-.category-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgb(249, 248, 248);
-}
-
-.category-header {
-  border-bottom: 1px solid rgb(249, 247, 247);
-  padding-bottom: 15px;
-}
-
-.category-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fdfafa;
-}
-
-.category-description {
-  font-size: 0.9rem;
-  color: #ae2d2d;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.luxury-image-container {
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 8px;
-  overflow: hidden;
-}
-
-.luxury-category-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.4s ease;
+  z-index: 1;
 }
 
-.image-hover-effect {
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(139, 0, 0, 0.3), rgba(220, 20, 60, 0.3));
-  opacity: 0;
-  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.luxury-image-container:hover .luxury-category-img {
-  transform: scale(1.1);
-}
-
-.luxury-image-container:hover .image-hover-effect {
-  opacity: 1;
-}
-
-/* Value Proposition Section */
-/* .luxury-values {
-  background: linear-gradient(135deg, #020000, #362929);
-} */
-
-.value-card {
-  background: #f48d8d;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  height: 100%;
-}
-
-.value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-}
-
-.value-icon {
-  font-size: 2.5rem;
-  color: #8B0000;
-}
-
-.value-card h3 {
-  font-size: 1.3rem;
+.hero-title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
   margin-bottom: 1rem;
-  color: #090909;
 }
 
-.value-card p {
-  font-size: 0.95rem;
-  color: #ae2d2d;
-  font-family: 'Montserrat', sans-serif;
+.hero-subtitle {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .category-title {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  
-  .hero-cta .cta-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-content h1 {
-    font-size: 4rem;
-  }
-}
-
-.hero-content p {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto 30px;
-}
-
-.hero-cta .btn {
-  min-width: 160px;
+.hero-buttons .btn {
+  min-width: 120px;
 }
