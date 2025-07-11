@@ -12,6 +12,9 @@ import Offers from './Customer/Offers';
 import Men from './Customer/Men';
 import Women from './Customer/Women';
 import Kids from './Customer/Kids';
+import Accessories from './Customer/Accessories';
+import Notification from './Customer/Notification';
+import Cart from './Customer/Cart';
 
 
 
@@ -28,6 +31,9 @@ function App() {
         <Route path="/Men" element={<Men />} />
         <Route path="/Women" element={<Women />} />
         <Route path="/Kids" element={<Kids />} />
+        <Route path="/accessories" element={<Accessories />} />
+        <Route path="/notifications" element={<Notification />} />
+        <Route path="/cart" element={<Cart />} />
 
       </Routes>
       

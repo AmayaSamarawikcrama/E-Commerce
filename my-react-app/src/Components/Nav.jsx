@@ -32,7 +32,7 @@ export default function NavBar() {
               <NavDropdown.Item href="/Men">Men</NavDropdown.Item>
               <NavDropdown.Item href="/Women">Women</NavDropdown.Item>
               <NavDropdown.Item href="/Kids">Kids</NavDropdown.Item>
-              <NavDropdown.Item href="/category/accessories">Accessories</NavDropdown.Item>
+              <NavDropdown.Item href="/accessories">Accessories</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link href="/about" className="text-white">About Us</Nav.Link>
