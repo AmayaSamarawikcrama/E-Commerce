@@ -31,7 +31,7 @@ export default function NavBar() {
             <NavDropdown title="Category" id="category-nav-dropdown" menuVariant="dark" fontcolor="white">
               <NavDropdown.Item href="/Men">Men</NavDropdown.Item>
               <NavDropdown.Item href="/Women">Women</NavDropdown.Item>
-              <NavDropdown.Item href="/category/kids">Kids</NavDropdown.Item>
+              <NavDropdown.Item href="/Kids">Kids</NavDropdown.Item>
               <NavDropdown.Item href="/category/accessories">Accessories</NavDropdown.Item>
             </NavDropdown>
 

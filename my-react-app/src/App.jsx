@@ -11,6 +11,7 @@ import AboutUs from './Customer/AboutUs';
 import Offers from './Customer/Offers';
 import Men from './Customer/Men';
 import Women from './Customer/Women';
+import Kids from './Customer/Kids';
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/offers" element={<Offers />} />
         <Route path="/Men" element={<Men />} />
         <Route path="/Women" element={<Women />} />
+        <Route path="/Kids" element={<Kids />} />
 
       </Routes>
       
