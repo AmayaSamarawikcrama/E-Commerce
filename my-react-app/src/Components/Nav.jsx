@@ -24,7 +24,7 @@ export default function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
 
           <Nav className="me-auto">
-            <Nav.Link href="/" className="text-white">Home</Nav.Link>
+            <Nav.Link href="/CusHomePage" className="text-white">Home</Nav.Link>
             <Nav.Link href="/offers" className="text-white">Offers</Nav.Link>
 
             {/* ✅ Category Dropdown */}
