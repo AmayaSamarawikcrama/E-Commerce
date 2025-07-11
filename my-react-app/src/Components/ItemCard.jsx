@@ -13,7 +13,7 @@ export default function ItemCard({ item, onAddToCart }) {
           style={{ height: '300px', objectFit: 'cover' }} 
         />
         <Card.Body className="text-center">
-          <Card.Title style={{ color: '#B00020' }}>{item.title}</Card.Title>
+          <Card.Title style={{ color: '#FF5656' }}>{item.title}</Card.Title>
           <Card.Text>${item.price}</Card.Text>
           <Button 
             variant="danger" 

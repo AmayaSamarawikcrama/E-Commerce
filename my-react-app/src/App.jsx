@@ -9,6 +9,7 @@ import Login from './Login';
 import CusHomePage from './Customer/CusHomePage';
 import AboutUs from './Customer/AboutUs';
 import Offers from './Customer/Offers';
+import Men from './Customer/Men';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/CusHomePage" element={<CusHomePage />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/offers" element={<Offers />} />
+        <Route path="/Men" element={<Men />} />
 
       </Routes>
       
