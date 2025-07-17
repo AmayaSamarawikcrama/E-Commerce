@@ -1,131 +1,118 @@
 import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Alert } from 'react-bootstrap';
+import { Form, Button, Container, Card, Alert, ButtonGroup, ToggleButton } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
-import logo from './assets/logo.png'; // Adjust path as needed
 
-const Login = () => {
+export default function Login() {
+  const [role, setRole] = useState('buyer');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState(null);
-  
+  const [loading, setLoading] = useState(false);
+
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    if (email.trim() && password.trim()) {
-      setMessage({ type: 'success', text: '✅ Login successful! Welcome.' });
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setMessage(null);
 
-      // Redirect after 2 seconds
-      setTimeout(() => {
-        navigate('/CusHomePage');
-      }, 2000);
-
-    } else {
+    if (!email.trim() || !password.trim()) {
       setMessage({ type: 'danger', text: '❌ Please enter both email and password.' });
+      return;
+    }
+
+    try {
+      setLoading(true);
+      await signInWithEmailAndPassword(auth, email, password);
+      setMessage({ type: 'success', text: `✅ Logged in as ${role}. Redirecting...` });
+
+      setTimeout(() => {
+        if (role === 'seller') {
+          navigate('/seller/home');
+        } else {
+          navigate('/CusHomePage');
+        }
+      }, 1500);
+    } catch (error) {
+      setMessage({ type: 'danger', text: `❌ ${error.message}` });
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <section className="h-100 gradient-form">
-      <div className="container py-3 h-100">
-        <div className="row d-flex justify-content-center align-items-center h-100">
-          <div className="col-xl-10">
-            <div className="card rounded-3 text-black">
-              <div className="row g-0">
-                
-                {/* Left side */}
-                <div className="col-lg-6">
-                  <div className="card-body p-3 mx-md-2">
-                    
-                    <div className="text-center">
-                      <img
-                        src={logo}
-                        style={{ width: '185px', cursor: 'pointer' }}
-                        alt="logo"
-                        onClick={() => navigate('/')}
-                      />
-                      <h4 className="mt-1 mb-5 pb-1">We are The Be Big</h4>
-                    </div>
+    <Container className="d-flex justify-content-center align-items-center py-5" style={{ minHeight: '100vh' }}>
+      <Card style={{ maxWidth: '400px', width: '100%', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
+        <Card.Body>
+          <h3 className="text-center mb-4 text-danger">Log In</h3>
+          {message && <Alert variant={message.type}>{message.text}</Alert>}
 
-                    <form>
-                      <p>Please login to your account</p>
-
-                      <div className="form-outline mb-3">
-                        <input
-                          type="email"
-                          id="form2Example11"
-                          className="form-control"
-                          placeholder="Phone number or email address"
-                          value={email}
-                          onChange={(e) => setEmail(e.target.value)}
-                        />
-                        <label className="form-label" htmlFor="form2Example11">Username</label>
-                      </div>
-
-                      <div className="form-outline mb-3">
-                        <input
-                          type="password"
-                          id="form2Example22"
-                          className="form-control"
-                          placeholder="Password"
-                          value={password}
-                          onChange={(e) => setPassword(e.target.value)}
-                        />
-                        <label className="form-label" htmlFor="form2Example22">Password</label>
-                      </div>
-
-                      {message && (
-                        <Alert variant={message.type} className="mt-3">
-                          {message.text}
-                        </Alert>
-                      )}
-
-                      <div className="text-center pt-4 mb-4 pb-4">
-                        <button
-                          type="button"
-                          className="btn btn-block btn-danger"
-                          onClick={handleLogin}
-                        >
-                          Log in
-                        </button>
-                        <a className="text-muted ms-3" href="#!">Forgot password?</a>
-                      </div>
-
-                      <div className="d-flex align-items-center justify-content-center pb-3">
-                        <p className="mb-0 me-2">Don't have an account?</p>
-                        <button
-                          type="button"
-                          className="btn btn-outline-danger"
-                          onClick={() => navigate('/SignIn')}
-                        >
-                          Create new
-                        </button>
-                      </div>
-                    </form>
-
-                  </div>
-                </div>
-
-                {/* Right side */}
-                <div className="col-lg-6 d-flex align-items-center gradient-custom-2">
-                  <div className="text-white px-2 py-3 p-md-3 mx-md-2">
-                    <h4 className="mb-3">We are more than just a company</h4>
-                    <p className="small mb-0">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
+          <div className="text-center mb-3">
+            <ButtonGroup>
+              <ToggleButton
+                id="buyer-radio"
+                type="radio"
+                variant={role === 'buyer' ? 'danger' : 'outline-danger'}
+                name="role"
+                value="buyer"
+                checked={role === 'buyer'}
+                onChange={(e) => setRole(e.currentTarget.value)}
+                disabled={loading}
+              >
+                Buyer
+              </ToggleButton>
+              <ToggleButton
+                id="seller-radio"
+                type="radio"
+                variant={role === 'seller' ? 'danger' : 'outline-danger'}
+                name="role"
+                value="seller"
+                checked={role === 'seller'}
+                onChange={(e) => setRole(e.currentTarget.value)}
+                disabled={loading}
+              >
+                Seller
+              </ToggleButton>
+            </ButtonGroup>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-};
 
-export default Login;
+          <Form onSubmit={handleLogin}>
+            <Form.Group className="mb-3" controlId="formEmail">
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
+              />
+            </Form.Group>
+
+            <Form.Group className="mb-4" controlId="formPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                disabled={loading}
+              />
+            </Form.Group>
+
+            <Button variant="danger" type="submit" className="w-100 mb-3" disabled={loading}>
+              {loading ? 'Logging in...' : `Log In as ${role.charAt(0).toUpperCase() + role.slice(1)}`}
+            </Button>
+          </Form>
+
+          <div className="text-center">
+            <small>
+              Don't have an account?{' '}
+              <Button variant="link" size="sm" className="p-0" onClick={() => navigate('/SignUp')}>
+                Sign up
+              </Button>
+            </small>
+          </div>
+        </Card.Body>
+      </Card>
+    </Container>
+  );
+}

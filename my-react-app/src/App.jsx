@@ -15,6 +15,9 @@ import Kids from './Customer/Kids';
 import Accessories from './Customer/Accessories';
 import Notification from './Customer/Notification';
 import Cart from './Customer/Cart';
+import Payment from './Customer/Payment';
+import SellerHome from './Seller/SellerHome';
+import SignUp from './Customer/SignUp';
 
 
 
@@ -34,6 +37,9 @@ function App() {
         <Route path="/accessories" element={<Accessories />} />
         <Route path="/notifications" element={<Notification />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/seller" element={<SellerHome />} />
+        <Route path="/signUp" element={<SignUp />} />
 
       </Routes>
       

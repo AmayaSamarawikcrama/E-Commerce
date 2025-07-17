@@ -39,8 +39,8 @@ export default function Men() {
 
   return (
     <>
+      <div className="luxury-home-page" style={{ backgroundColor: '#f8f9fa' }}>
       <NavBar />
-
       <Container className="my-5" style={{ maxWidth: '1200px' }}>
         <h1 className="text-center mb-4" style={{ color: '#FF5656' }}>Men's Collection</h1>
         <p className="text-center mb-5">
@@ -57,6 +57,7 @@ export default function Men() {
       </Container>
 
       <Footer />
+      </div>
     </>
   );
 }

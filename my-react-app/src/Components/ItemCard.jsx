@@ -1,8 +1,15 @@
-// ItemCard.jsx
 import React from 'react';
 import { Card, Button, Container } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 export default function ItemCard({ item, onAddToCart }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    onAddToCart(item);
+    navigate('/cart');
+  };
+
   return (
     <Container className="my-3 d-flex justify-content-center">
       <Card style={{ width: '18rem', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }}>
@@ -17,7 +24,7 @@ export default function ItemCard({ item, onAddToCart }) {
           <Card.Text>${item.price}</Card.Text>
           <Button 
             variant="danger" 
-            onClick={() => onAddToCart(item)}
+            onClick={handleClick}
           >
             Add to Cart
           </Button>

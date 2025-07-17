@@ -34,6 +34,7 @@ export default function Notification() {
 
   return (
     <>
+    <div className="luxury-home-page" bg color='white'>
       <NavBar />
 
       <Container className="my-5" style={{ maxWidth: '900px' }}>
@@ -58,6 +59,7 @@ export default function Notification() {
       </Container>
 
       <Footer />
+    </div>
     </>
   );
 }

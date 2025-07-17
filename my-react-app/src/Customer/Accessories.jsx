@@ -39,6 +39,7 @@ export default function Accessories() {
 
   return (
     <>
+      <div className="luxury-home-page" style={{ backgroundColor: 'white' }}>
       <NavBar />
 
       <Container className="my-5" style={{ maxWidth: '1200px' }}>
@@ -64,6 +65,7 @@ export default function Accessories() {
       </Container>
 
       <Footer />
+      </div>
     </>
   );
 }

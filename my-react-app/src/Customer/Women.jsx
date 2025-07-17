@@ -39,6 +39,7 @@ export default function Women() {
 
   return (
     <>
+      <div className="luxury-home-page" style={{ backgroundColor: 'white' }}>
       <NavBar />
 
       <Container className="my-5" style={{ maxWidth: '1200px' }}>
@@ -57,6 +58,7 @@ export default function Women() {
       </Container>
 
       <Footer />
+      </div>
     </>
   );
 }
