@@ -157,7 +157,7 @@ export default function SellerHome() {
   return (
     <>
      <div className="seller-home-page bg-light">
-
+        <NavBar/>
       <Container className="my-5" style={{ maxWidth: '1200px' }}>
         <h1 className="text-center mb-4 text-danger">Welcome Seller!</h1>
         <p className="text-center mb-4">
